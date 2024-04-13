@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Video Player</title>
+    <!-- Include Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+    <style>
+        /* Add any custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Video Player -->
+        <video id="videoPlayer" controls crossorigin playsinline>
+            <!-- Video file will be loaded here -->
+        </video>
+        <br>
+        <!-- File Chooser -->
+        <input type="file" id="fileInput">
+    </div>
+
+    <!-- Include Plyr JS -->
+    <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+    <script>
+        // Initialize Plyr
+        const player = new Plyr('#videoPlayer', {
+            // Options (e.g. controls, autoplay)
+        });
+
+        // Handle file input change
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const url = URL.createObjectURL(file);
+            // Load the selected video file into the player
+            player.source = {
+                type: 'video',
+                sources: [{
+                    src: url,
+                    type: file.type
+                }]
+            };
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Example</title>
+</head>
+<body>
+    <h2>My Video</h2>
+    <video width="640" height="360" controls>
+        <source src="e8e1-0dcd-4889-af48-c6ae78020b46.mp4" type="video/mp4">
+        <!-- Provide alternative formats for compatibility -->
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

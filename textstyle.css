@@ -1,0 +1,22 @@
+/* CSS for animated text */
+#animatedText {
+    font-family: 'Comic Sans MS', cursive; /* Change font-family to Comic Sans MS */
+    font-size: 5rem;
+    color: transparent;
+    text-transform: uppercase;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: multicolorAnimation 4s infinite;
+}
+
+@keyframes multicolorAnimation {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: violet; }
+}
+

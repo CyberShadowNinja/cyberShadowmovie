@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviewala📽️</title>
+    <link rel="stylesheet" href="styleb.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop poster="" id="bgVideo">
+        <source src="856309-hd_1920_1080_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Feedback button -->
+    <button class="feedback-button" onclick="openFeedbackModal()">Give Feedback</button>
+
+    <!-- How to Download tab -->
+    <div class="tab-container">
+        <button class="tab-button" onclick="openTab('download')">How to Download</button>
+    </div>
+
+    <!-- How to Download video player -->
+    <div id="download" class="tab-content" style="display: none;">
+        <!-- Video player -->
+        <video controls width="400">
+            <source src="e8e1-0dcd-4889-af48-c6ae78020b46.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Go Back button -->
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFeedbackModal()">&times;</span>
+            <!-- Embed Google Form or your feedback form here -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYDrBp7p-7-QT8n2l3RtX7EKLW5AcubkqBIsJ0lXmJx1J7qQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
+    <!-- Big Moviewala Text -->
+    <div class="big-text-container">
+        <h1 class="big-text">Moviewala</h1>
+    </div>
+
+    <!-- JavaScript to handle modal functionality -->
+    <script src="backg.js"></script>
+    <script>
+        // Function to open the specified tab
+        function openTab(tabName) {
+            var i, tabContent;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+
+        // Function to go back to the main content
+        function goBack() {
+            document.getElementById("download").style.display = "none";
+            // You can add additional logic here if needed
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviewala📽️</title>
+    <link rel="stylesheet" href="textstyle.css">
+    <style>
+      /* CSS for animated text */
+#animatedText {
+    font-family: 'Comic Sans MS', cursive; /* Change font-family to Comic Sans MS */
+    font-size: 5rem;
+    color: transparent;
+    text-transform: uppercase;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: multicolorAnimation 4s infinite;
+}
+
+@keyframes multicolorAnimation {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: violet; }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML content here -->
+
+    <!-- Animated text -->
+    <div id="animatedText">
+        Moviewala📽️
+    </div>
+
+    <!-- JavaScript and other elements continue below -->
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviewala📽️</title>
+    <style>
+        /* CSS for the logo */
+        #logo {
+            width: 200px; /* Adjust the width as needed */
+            height: auto; /* Maintains aspect ratio */
+            display: block;
+            margin: 10px auto; /* Center the logo horizontally */
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <img id="logo" src="—Pngtree—movies logo_414178.png" alt="Website Logo">
+
+    <!-- Rest of your website content goes here -->
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="movie-trailer.html">Movie Trailer</a></li> <!-- Add this line for the movie trailer tab -->
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Rest of your website content goes here -->
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        /* Style for the button */
+        .open-trailer-button {
+            background-color: #b8e04a; /* Green background */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button to open the movie trailer -->
+    <button class="open-trailer-button" onclick="openMovieTrailer()">Open Movie Trailer</button>
+
+    <!-- JavaScript to open the movie trailer -->
+    <script>
+        function openMovieTrailer() {
+            // Open the provided HTML document containing the embedded movie trailer
+            window.open('movie-trailer.html', '_blank');
+        }
+    </script>
+</body>
+</html>
+
